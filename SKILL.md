@@ -5,7 +5,7 @@ description: 智能 CI 构建监控 - 根据历史构建时间动态调整检查
 
 ## Usage
 
-When user asks to monitor CI builds, run the script in this skill directory:
+When user asks to monitor CI builds, execute:
 
 ```bash
 node index.js [branch]
@@ -22,9 +22,9 @@ node index.js [branch]
 
 ## Examples
 
-- "Monitor CI build" → `node index.js main`
-- "Check CI status for main branch" → `node index.js main`
-- "Watch the build on feature-x" → `node index.js feature-x`
+- "Monitor CI build" → run `node index.js main`
+- "Check CI status for main branch" → run `node index.js main`
+- "Watch the build on feature-x" → run `node index.js feature-x`
 
 ## Implementation
 

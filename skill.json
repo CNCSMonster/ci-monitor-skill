@@ -1,0 +1,20 @@
+{
+  "name": "ci-monitor",
+  "version": "1.0.0",
+  "description": "智能 CI 构建监控 - 根据历史构建时间动态调整检查间隔",
+  "author": "cncsmonster",
+  "license": "MIT",
+  "keywords": ["ci", "github-actions", "monitor", "build"],
+  "main": "index.js",
+  "skills": {
+    "ci-monitor": {
+      "description": "Monitor CI builds with adaptive check intervals based on historical build times",
+      "usage": "Monitor the CI build for [branch]",
+      "examples": [
+        "Monitor CI build",
+        "Check CI status for main branch",
+        "Watch the build and report when done"
+      ]
+    }
+  }
+}

@@ -20,15 +20,24 @@
 
 ## 安装
 
+### 方式 1: 全局安装（推荐）
+
 ```bash
-# 克隆技能仓库
-git clone https://github.com/YOUR_USERNAME/ci-monitor-skill.git
+git clone https://github.com/CNCSMonster/ci-monitor-skill.git ~/.qwen/skills/ci-monitor
+```
 
-# 进入目录
+### 方式 2: 项目安装
+
+```bash
+git clone https://github.com/CNCSMonster/ci-monitor-skill.git .qwen/skills/ci-monitor
+```
+
+### 方式 3: 直接使用
+
+```bash
+git clone https://github.com/CNCSMonster/ci-monitor-skill.git
 cd ci-monitor-skill
-
-# 安装依赖（如果需要）
-npm install
+node index.js
 ```
 
 ## 使用方法
@@ -43,13 +52,15 @@ node index.js
 node index.js wsl2-ubuntu-24
 ```
 
-### 在 Claude Code 中使用
+### 在 Qwen Code 中使用
 
-```
-/monitor-ci
+安装到 `~/.qwen/skills/ci-monitor/` 后，AI 会自动识别并执行：
+
+```bash
+node ~/.qwen/skills/ci-monitor/index.js [branch]
 ```
 
-或自然语言：
+或直接说：
 - "监控 CI 构建"
 - "Check CI status"
 - "Watch the build and report when done"
@@ -62,19 +73,10 @@ node index.js wsl2-ubuntu-24
 
 ## 配置
 
-编辑 `skill.json` 修改默认设置：
-
-```json
-{
-  "defaultBranch": "main",
-  "defaultWorkflow": "Dockerfile Build Check",
-  "checkIntervals": {
-    "early": 60000,
-    "middle": 30000,
-    "late": 15000,
-    "overtime": 5000
-  }
-}
+在 `index.js` 中修改默认设置：
+```javascript
+const DEFAULT_BRANCH = 'main';
+const DEFAULT_WORKFLOW = 'Dockerfile Build Check';
 ```
 
 ## 许可证
